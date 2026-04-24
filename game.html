@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Khoiri Qusthulani</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            padding: 30px 20px;
+            color: white;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-bottom: 40px;
+            transition: color 0.3s ease;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .back-btn:hover { color: #fff; }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2em;
+            letter-spacing: 3px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #444;
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            width: 40px;
+            height: 1px;
+            background: #222;
+            margin: 20px auto;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .game-card {
+            background: #111;
+            border: 1px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: block;
+        }
+
+        .game-card:hover {
+            background: #1a1a1a;
+            border-color: #333;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .game-icon {
+            font-size: 2.8em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .game-name {
+            font-size: 1em;
+            font-weight: 600;
+            color: #ddd;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .game-desc {
+            font-size: 0.8em;
+            color: #444;
+            letter-spacing: 0.5px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #1a1a1a;
+            border: 1px solid #222;
+            color: #555;
+            font-size: 0.7em;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-family: 'Space Mono', monospace;
+            letter-spacing: 1px;
+        }
+
+        .game-card:hover .tag {
+            border-color: #444;
+            color: #888;
+        }
+
+        @media (max-width: 480px) {
+            .games-grid { gap: 12px; }
+            .game-card { padding: 25px 15px; }
+            .game-icon { font-size: 2.2em; }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Kembali</a>
+
+    <div class="header">
+        <h1>GAME</h1>
+        <div class="divider"></div>
+        <p>Pilih game yang ingin dimainkan</p>
+    </div>
+
+    <div class="games-grid">
+        <a href="https://qusthulani.github.io/tetris" target="_blank" class="game-card">
+            <span class="game-icon">🧊</span>
+            <div class="game-name">Tetris</div>
+            <div class="game-desc">Susun balok jatuh</div>
+            <span class="tag">CLASSIC</span>
+        </a>
+
+        <a href="https://qusthulani.github.io/snake" target="_blank" class="game-card">
+            <span class="game-icon">🐍</span>
+            <div class="game-name">Snake</div>
+            <div class="game-desc">Makan & bertumbuh</div>
+            <span class="tag">RETRO</span>
+        </a>
+
+        <a href="https://khoiri-memory.netlify.app" target="_blank" class="game-card">
+            <span class="game-icon">🃏</span>
+            <div class="game-name">Memory Card</div>
+            <div class="game-desc">Temukan pasangan</div>
+            <span class="tag">PUZZLE</span>
+        </a>
+
+        <a href="https://khoiri-puzzle.netlify.app" target="_blank" class="game-card">
+            <span class="game-icon">🧩</span>
+            <div class="game-name">Puzzle Geser</div>
+            <div class="game-desc">Urutkan angka 1-15</div>
+            <span class="tag">LOGIC</span>
+        </a>
+    </div>
+</body>
+</html>
